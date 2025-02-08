@@ -1,5 +1,6 @@
 workflows:
-  version: 2
+  version: 
+    name: "2"  # Zde zajišťujeme, že 'version' je slovník
   build:
     jobs:
       - build-esp32:
