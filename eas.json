@@ -1,0 +1,8 @@
+{
+  "build": {
+    "ios": {
+      "workflow": "managed",
+      "distribution": "store"
+    }
+  }
+}

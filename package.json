@@ -1,0 +1,14 @@
+{
+  "name": "esp32-loveju-app",
+  "version": "1.0.0",
+  "main": "App.js",
+  "dependencies": {
+    "expo": "~48.0.0",
+    "react": "18.2.0",
+    "react-native": "0.71.8"
+  },
+  "scripts": {
+    "start": "expo start",
+    "build": "eas build -p ios"
+  }
+}
