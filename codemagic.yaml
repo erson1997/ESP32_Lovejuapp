@@ -2,7 +2,6 @@ workflows:
   version: 
     name: "2"  # Zde zajišťujeme, že 'version' je slovník
   build:
-    jobs:
       - name: Build ESP32 Application
         docker:
           - image: cirrusci/flutter:stable
