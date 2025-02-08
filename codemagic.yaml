@@ -2,21 +2,21 @@ workflows:
   version: 
     name: "2"  # Zde zajišťujeme, že 'version' je slovník
   build:
-      - name: Build ESP32 Application
-        docker:
-          - image: cirrusci/flutter:stable
-        steps:
-          - checkout
-          - run:
-              name: Install ESP32 toolchain
-              command: |
-                sudo apt-get update
-                sudo apt-get install -y gcc-avr libusb-1.0-0-dev
-          - run:
-              name: Build the project
-              command: |
-                cd path/to/your/esp32/project
-                make
-          - archive:
-              path: build/esp32/firmware.bin
-              destination: $HOME/esp32_firmware.bin
+    name: Build ESP32 Application
+    docker:
+      image: cirrusci/flutter:stable
+    steps:
+      - checkout
+      - run:
+          name: Install ESP32 toolchain
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y gcc-avr libusb-1.0-0-dev
+      - run:
+          name: Build the project
+          command: |
+            cd path/to/your/esp32/project
+            make
+      - archive:
+          path: build/esp32/firmware.bin
+          destination: $HOME/esp32_firmware.bin
